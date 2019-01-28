@@ -1,0 +1,26 @@
+global_frame: odom
+robot_base_frame: base_link
+update_frequency: 2.0
+publish_frequency: 2.0
+static_map: false
+rolling_window: true
+width: 4.0
+height: 4.0
+resolution: 0.025
+map_type: costmap
+
+track_unknown_space: true
+observation_sources: point_cloud_sensorA 
+
+point_cloud_sensorA: {
+    sensor_frame: base_link,
+    data_type: PointCloud2,
+    topic: /rtabmap/cloud_obstacles,
+    expected_update_rate: 1.5,
+    marking: true,
+    clearing: false,
+    min_obstacle_height: -1.0,
+    max_obstacle_height: 2.0
+    }
+
+

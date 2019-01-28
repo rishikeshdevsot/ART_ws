@@ -1,0 +1,23 @@
+<launch>
+
+    <!-- Transforms -->
+    <node pkg="transform" type="lasertf" name="lasertf" ns = "lasertf"> 
+    </node>
+    <node pkg="transform" type="zedtf" name="zedtf" ns = "zedtf"> 
+    </node>
+
+    <!-- Stereo camera -->
+    <group ns="/zed">
+      <include file="$(find zed_wrapper)/launch/zed_camera.launch">
+        <!-- compliant mode for rviz -->
+        <arg name="publish_tf"            value="true" />
+      </include>       	  
+    </group>
+   
+    <!-- Odom -->
+    <node pkg="odom" type="odom" name="odom"> 
+    </node>  
+  
+
+
+</launch>

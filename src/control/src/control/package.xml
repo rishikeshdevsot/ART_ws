@@ -1,0 +1,17 @@
+<package>
+    <name>control</name>
+    <version>1.14.2</version>
+    <description>
+        Control package
+    </description>
+    <maintainer email="brian.aly@mail.utoronto.ca">Brian Aly</maintainer>
+    <author>brian.aly@mail.utoronto.ca</author>
+    <license>MIT</license>  
+    <url>http://wiki.ros.org/navigation</url>
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <export>
+        <metapackage/>
+    </export>
+</package>

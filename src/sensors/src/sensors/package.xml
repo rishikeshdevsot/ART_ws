@@ -1,0 +1,19 @@
+<package>
+    <name>sensors</name>
+    <version>1.14.2</version>
+    <description>
+        Sensors package
+    </description>
+    <maintainer email="brian.aly@mail.utoronto.ca">Brian Aly</maintainer>
+    <author>brian.aly@mail.utoronto.ca</author>
+    <license>MIT</license>  
+
+    <buildtool_depend>catkin</buildtool_depend>
+
+    <run_depend>rosserial_python</run_depend>
+    <run_depend>urg_node</run_depend>
+
+    <export>
+        <metapackage/>
+    </export>
+</package>

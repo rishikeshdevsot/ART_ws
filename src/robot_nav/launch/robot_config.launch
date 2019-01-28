@@ -1,0 +1,41 @@
+<launch>
+
+<!--
+  <node pkg="rosserial_python" type="serial_node.py" name="encoder1_node" ns= "encoder1_node">
+    <param name="port" value="/dev/ttyACM1" />
+    <param name="baud" value="57600" />
+  </node>
+
+  <node pkg="rosserial_python" type="serial_node.py" name="encoder2_node" ns= "encoder2_node">
+    <param name="port" value="/dev/ttyACM2" />
+    <param name="baud" value="57600" />
+  </node>
+
+
+  <node pkg="rosserial_python" type="serial_node.py" name="motor_node" ns= "motor_node">
+    <param name="port" value="/dev/ttyACM0" />
+    <param name="baud" value="57600" />
+  </node>
+-->
+
+  <node pkg="transform" type="lasertf" name="lasertf" ns = "lasertf">
+  </node>
+
+  <node pkg="transform" type="zedtf" name="zedtf" ns = "zedtf">
+  </node>
+
+  <node pkg="urg_node" type="urg_node" name="lidar_node" ns= "lidar">
+    <param name="serial_port" value="/dev/ttyACM0" />
+    <param name="serial_baud" value="115200" />
+    <param name="frame_id" value="laser" />
+    <param name="calibrate_time" value="true" />
+    <param name="publish_intensity" value="false" />
+    <param name="publish_multiecho" value="laser" />
+    <param name="angle_min" value="-1.5707963" />
+    <param name="angle_max" value="1.5707963" />
+  </node>
+
+
+ 
+   
+</launch>
